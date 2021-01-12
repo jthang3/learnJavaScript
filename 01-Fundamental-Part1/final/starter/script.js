@@ -87,3 +87,71 @@ else{
 let height;
 
 height ? console.log("YAY height is defined!!"):console.log("Height is undefined");
+
+
+//switch Statement
+//Compare one value to multiple different options
+
+const day = "Sunday";
+
+switch(day){
+    case "Monday":
+        console.log("Plan course Structure");
+        console.log("Go to coding meetup");
+        break;
+    case "Wednesday":
+    case "Thursday":
+        console.log("Write Code example");
+        break;
+    case "Friday":
+        console.log("Record Videoes");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("Enjoy the weekend 😊");
+        break;
+    default:
+        console.log("Not a valid day");
+    
+}
+
+//above in if else logic
+
+if (day === "Monday"){
+    console.log("Plan course Structure");
+    console.log("Go to coding meetup");
+}
+else if (day === "Tuesday"){
+    console.log("Study code");
+}
+else if (day === "Wednesday" || day === "Thursday"){
+    console.log("Write Code example");
+}
+else if(day === "Friday"){
+    console.log("Record Videoes");
+}
+else if (day === "Saturday" || day === "Sunday"){
+    console.log("Enjoy the weekend 😊");
+}
+else {
+    console.log("Not a valid day");
+}
+
+
+//statement vs expression
+
+//An expression is a piece of codes that producce a value. For example 3+4 is an example.
+
+//statement does not produce a value on itself. if/else for example is a statement. Full sentences that translate for actions
+
+//full example
+
+// statement = expression
+
+// console.log(`hello ${need to put expression not statement}`);
+
+const age2 = 23;
+const drink = age2 >= 18 ? "Wine 🍷": "water 🥤";
+console.log(drink);
+
+console.log(`I like to drink ${age2 >= 18 ? "Wine" : "Water"}`);
