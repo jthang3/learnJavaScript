@@ -22,7 +22,7 @@ console.log(myJuice);
 
 //function declaration
 //you can call the function before you create it
-
+//return statement to output a value from the function and terminate execution
 function calcAge1 (birthYear){
     let calYear = 2021 - birthYear;
     return calYear;
@@ -51,13 +51,21 @@ console.log(calcAge3(1997))
 
 //examples
 
+//codes after return will not read in functions
+
 const yearsUntilRetirement = (birthYear,firstName) => {
     let currentAge = 2021 - birthYear;
     let retireMentAgae = 65;
-    return `The person name ${firstName} is going to retire in ${retireMentAgae - currentAge}`;
+    let retirement = retireMentAgae - currentAge;
+    if(retirement > 0){
+        return retirement;
+    }
+    else {
+        return -1;
+    }
 }
 
-console.log(yearsUntilRetirement(1997,"John"));
+console.log("Testing",yearsUntilRetirement(1910,"John"));
 
 
 //functions calling other functions
