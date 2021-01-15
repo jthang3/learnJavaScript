@@ -81,3 +81,26 @@ const myFruits = (apples, oranges) => {
 }
 
 console.log(myFruits(2,3));
+
+
+
+///ARRAY
+
+//one way
+let friends = ["Michael","Steven","Peter"];
+console.log(friends);
+
+//another way
+
+let years = new Array(1991,1984,2008,2020);
+
+console.log(friends[0]);
+
+console.log(friends.length);
+
+friends[2] = "Jay";
+console.log(friends);
+
+let firstname = "Jonas";
+let jonas = [firstname,"Schmedtmann",2037 - 1991, "teacher",friends];
+console.log(jonas);

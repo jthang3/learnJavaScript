@@ -8,10 +8,10 @@ let dolphins = calcAverage(85,54,41);
 let koalas = calcAverage(23,34,27);
 
 function checkWinner (avgDolhins,avgKoalas){
-    if (avgDolhins > avgKoalas * 2){
+    if (avgDolhins >= avgKoalas * 2){
         console.log(`Dolphin win (${avgDolhins} vs. ${avgKoalas})`);
     }
-    else if (avgKoalas > avgDolhins * 2){
+    else if (avgKoalas >= avgDolhins * 2){
         console.log(`Kolas win (${avgKoalas} vs. ${avgDolhins})`);
     }
     else {
