@@ -104,3 +104,67 @@ console.log(friends);
 let firstname = "Jonas";
 let jonas = [firstname,"Schmedtmann",2037 - 1991, "teacher",friends];
 console.log(jonas);
+
+//Methods manipulating arrays
+//push return the length of the new array.
+let myArray = jonas.push("John");
+console.log(`This is myArray = ${myArray}.`);
+console.log(`This is jonas ${jonas}`);
+
+//jonas.unshift("Joseph");
+//unshift also returns length of the array
+let myArray1 = jonas.unshift("Joseph");
+console.log(`myArray1 ${myArray1}`);
+console.log(`Jonas after unshift ${jonas}`);
+
+
+//pop and shift
+
+let testingArray = ["John","Joseph","Tesla","Apple"];
+
+let myNewArray = testingArray.pop();
+console.log(`testingArray after pop function applied = ${testingArray}`);
+console.log(`Pop return = ${myNewArray}`);
+
+//shift -> the first element of the array and return it
+let shiftedArray = testingArray.shift();
+console.log(`First element of the array - ${shiftedArray}`);
+console.log(`myNewArray after shift function applied - ${testingArray}`);
+
+//includes -> return true if the element is in the array. Strict checking
+
+
+//Object
+
+const john = {
+    firstName: "John",
+    lastName: "lyin",
+    age: 2020 - 1997,
+    job: "Application Support",
+    friends: ["Michael","Peter","Steven"]
+}
+
+let question = prompt("What do you want to know about John? Choose first Name, last name, age, job, friends");
+
+if(question === "first name"){
+    console.log(john.firstName);
+}
+else if(question === "last name"){
+    console.log(john.lastName);
+}
+else if(question === "age"){
+    console.log(john.age);
+}
+else if(question === "job"){
+    console.log(john.job);
+}
+else if(question === "friends"){
+    console.log(john.friends);
+}
+else{
+    console.log("Please pick one from the options");
+}
+
+//john has three friends, and his best friend is called Michael
+
+console.log(`${john.firstName} has ${john.friends.length} friends, and his best friend is called ${john.friends[0]}`);
