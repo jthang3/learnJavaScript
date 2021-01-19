@@ -168,3 +168,23 @@ else{
 //john has three friends, and his best friend is called Michael
 
 console.log(`${john.firstName} has ${john.friends.length} friends, and his best friend is called ${john.friends[0]}`);
+
+
+
+//Object methods
+//can not use arrow function as a method for an object
+//this keyword represent the object.
+const johnLyin = {
+    firstName: "John",
+    lastName: "Lyin",
+    birthYear: 1997,
+    job: "Applicant support",
+    friends: ["Michael","Peter","Steven"],
+    hasDriverLicense: true,
+    calcAge: function () {
+        this.age = 2020 - this.birthYear;
+    }
+}
+
+johnLyin.calcAge();
+console.log(johnLyin.age);
