@@ -47,3 +47,32 @@ else if(markMiller.bmiValue < johnSmith.bmiValue){
 else{
     console.log("Same BMI");
 }
+
+//loop
+
+for (let rep = 1; rep <= 10; rep++){
+    console.log(`Lifting weights repetition ${rep}`);
+}
+let newArray = [];
+const JohnArray = [
+    'Jonas',
+    "Lyin",
+    2037 - 2021,
+    'teacher',
+    ["Michael", "Peter", "Steven"]
+]
+
+for (let i of JohnArray){
+    console.log(i);
+    newArray.push(typeof(i));
+}
+console.log(newArray);
+
+//continue and break
+//continue is to exit the current iretation of the loop and continue to the next one
+for (let i of JohnArray){
+    if (typeof(i) !== "string"){
+        continue;
+    }
+    console.log(i);
+}
