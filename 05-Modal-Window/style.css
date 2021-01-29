@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+*:focus {
+    outline: 0;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.5;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+.show-modal {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 3.5rem;
+    margin: 5rem 2rem;
+    border:none;
+    background-color: #fff;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+.show-modal:hover {
+    transform: scale(1.2,1.2);
+    box-shadow: 0 3rem 5rem rgba(0,0,0,0.3);
+}
+.show-modal::after {
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    background-color: white;
+    padding: 6em;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0,0,0,0.3);
+    z-index: 10;
+    height: 60vh;
+}
+
+.modal h1 {
+    font-size: 50px;
+    font-weight:800;
+    margin-bottom: 20px !important;
+}
+.modal h1,p {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+.modal p {
+    font-size: 30px;
+}
+.close-modal {
+    background: none;
+    border:none;
+    font-size: 3rem;
+    width: 3rem;
+    margin-left: 90%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.close-modal:hover {
+    background-color: red;
+    border-radius: 10px;
+}

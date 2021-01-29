@@ -21,19 +21,24 @@ evenTesting.onclick = () => {
                 myMessage.textContent = "⛔No Number!";
             }
             else{
-    
-                myGuess = Number(myGuess);
-                if(myGuess > randomNumber){
+                let myFunction = () => {
                     myMessage.textContent = "👎Too Big";
                     myScore --;
                     score.textContent = myScore;
                 }
-                else if(myGuess < randomNumber){
-                    myMessage.textContent = "👎Too Small";
+                myGuess = Number(myGuess);
+                myGuess > randomNumber ? myMessage.textContent = "👎Too Big":myMessage.textContent = "👎Too Small";
+                if(myGuess > randomNumber){
+                    // myMessage.textContent = "👎Too Big";
                     myScore --;
                     score.textContent = myScore;
                 }
-                else {
+                else if(myGuess < randomNumber){
+                    // myMessage.textContent = "👎Too Small";
+                    myScore --;
+                    score.textContent = myScore;
+                }
+                if(myGuess === randomNumber) {
                     myMessage.textContent = "👌Correct!!"
                     document.querySelector(".number").textContent = randomNumber;
                     console.log(myScore,currentHighScore);
